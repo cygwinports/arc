@@ -1,0 +1,20 @@
+--- origsrc/arc-5.21p/arcdos.c	2010-08-07 08:06:42.000000000 -0500
++++ src/arc-5.21p/arcdos.c	2015-02-17 19:42:14.094108500 -0600
+@@ -30,17 +30,13 @@
+ #if	UNIX
+ #include <sys/types.h>
+ #include <sys/stat.h>
+-#if	BSD
+ #include <sys/time.h>
+-#else	
+-#include <time.h>		/* Sys V. Bleah. */
+ #if	NEED_TIMEVAL
+ struct	timeval {
+ 	long	tv_sec;
+ 	long	tv_usec;
+ };
+ #endif
+-#endif	/* BSD vs SYSV */
+ #endif
+ 
+ #if	GEMDOS
